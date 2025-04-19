@@ -43,19 +43,25 @@ body {
   color: var(--text-color);
   text-decoration: none;
 }
+header {
+  margin-bottom: 0; /* Remove bottom margin from header */
+  padding-bottom: 0; /* Remove bottom padding from header */
+}
 .title {
   font-size: 3rem;
   font-weight: bold;
+  margin-bottom: 0; /* Ensure no bottom margin */
 }
 .base-info {
   display: flex;
+  margin-bottom: 0; /* Ensure no bottom margin */
 }
 .info-item {
   line-height: 1.5em;
   margin-right: 1em;
 }
 .links {
-  margin: 0.4em 0 1em;
+  margin: 0.4em 0 0; /* Remove bottom margin */
   display: flex;
 }
 .links svg {
@@ -65,7 +71,11 @@ body {
   margin-right: 2em;
 }
 .chapter {
-  margin: 1em 0;
+  margin: 0.1em 0; /* Minimize top margin */
+}
+article {
+  margin-top: 0; /* Remove top margin from article */
+  padding-top: 0; /* Remove top padding from article */
 }
 .chapter-title {
   font-size: 1.3rem;
@@ -97,6 +107,22 @@ body {
 }
 .section-title-des {
   font-size: 0.8em;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 调整垂直对齐方式 */
+  margin-bottom: 0.5em; /* 减少底部空白 */
+}
+.info-details {
+  flex-grow: 1; /* Allow info details to take up available space */
+}
+.resume-photo {
+  max-width: 150px; /* Limit photo width */
+  max-height: 200px; /* Limit photo height */
+  margin-left: 2em; /* Add some space between info and photo */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border-radius: 4px; /* Optional: add rounded corners */
 }
 footer {
   text-align: center;
